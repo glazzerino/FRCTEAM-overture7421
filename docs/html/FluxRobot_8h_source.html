@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('FluxRobot_8h_source.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,11 @@ $(document).ready(function(){initNavTree('FluxRobot_8h_source.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_4948d4d0253e2d3fd811d8c3b574a981.html">Subsystems</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">FluxRobot.h</div>  </div>
@@ -86,7 +69,7 @@ $(document).ready(function(){initNavTree('FluxRobot_8h_source.html','');});
 <div class="contents">
 <a href="FluxRobot_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;frc/WPILib.h&quot;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="FluxSubsystem_8h.html">Subsystems/FluxSubsystem.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SubsystemManager_8h.html">Subsystems/SubsystemManager.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classFluxRobot.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFluxRobot.html">FluxRobot</a> : <span class="keyword">public</span> frc::TimedRobot, <span class="keyword">protected</span> <a class="code" href="classFluxSubsystem.html">FluxSubsystem</a> {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classFluxRobot.html#aaf20a889c03907de208317746f733d7a">FluxRobot</a>(<span class="keyword">const</span> std::string &amp;robotName);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFluxRobot.html#aa5fcf98b4dfd539b1b49772381578dc8">initSubsystems</a>() = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFluxRobot.html#a6f7940d8f82e80a6e405bad20ec9a5a5">addProperties</a>() = 0;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classFluxRobot.html#a55d2406f800dddb8f7d4754ef5fb2ede">   20</a></span>&#160;        <a class="code" href="classSubsystemManager.html">SubsystemManager</a> &amp;<a class="code" href="classFluxRobot.html#a55d2406f800dddb8f7d4754ef5fb2ede">manager</a> = <a class="code" href="classSubsystemManager.html#a3acce674e15d2534ed8a0877b78ac64d">SubsystemManager::getInstance</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> RobotInit() <span class="keyword">override</span>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> RobotPeriodic() <span class="keyword">override</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> DisabledInit() <span class="keyword">override</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> DisabledPeriodic() <span class="keyword">override</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> TeleopInit() <span class="keyword">override</span>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> TeleopPeriodic() <span class="keyword">override</span>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> AutonomousInit() <span class="keyword">override</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> AutonomousPeriodic() <span class="keyword">override</span>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div><div class="ttc" id="classSubsystemManager_html"><div class="ttname"><a href="classSubsystemManager.html">SubsystemManager</a></div><div class="ttdef"><b>Definition:</b> SubsystemManager.h:7</div></div>
 <div class="ttc" id="SubsystemManager_8h_html"><div class="ttname"><a href="SubsystemManager_8h.html">SubsystemManager.h</a></div></div>
-<div class="ttc" id="classFluxSubsystem_html"><div class="ttname"><a href="classFluxSubsystem.html">FluxSubsystem</a></div><div class="ttdef"><b>Definition:</b> FluxSubsystem.h:10</div></div>
+<div class="ttc" id="classFluxSubsystem_html"><div class="ttname"><a href="classFluxSubsystem.html">FluxSubsystem</a></div><div class="ttdef"><b>Definition:</b> FluxSubsystem.h:11</div></div>
 <div class="ttc" id="classFluxRobot_html_aaf20a889c03907de208317746f733d7a"><div class="ttname"><a href="classFluxRobot.html#aaf20a889c03907de208317746f733d7a">FluxRobot::FluxRobot</a></div><div class="ttdeci">FluxRobot(const std::string &amp;robotName)</div><div class="ttdef"><b>Definition:</b> FluxRobot.cpp:3</div></div>
 <div class="ttc" id="classFluxRobot_html_a6f7940d8f82e80a6e405bad20ec9a5a5"><div class="ttname"><a href="classFluxRobot.html#a6f7940d8f82e80a6e405bad20ec9a5a5">FluxRobot::addProperties</a></div><div class="ttdeci">virtual void addProperties()=0</div></div>
 <div class="ttc" id="classSubsystemManager_html_a3acce674e15d2534ed8a0877b78ac64d"><div class="ttname"><a href="classSubsystemManager.html#a3acce674e15d2534ed8a0877b78ac64d">SubsystemManager::getInstance</a></div><div class="ttdeci">static SubsystemManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> SubsystemManager.h:9</div></div>
@@ -95,15 +78,11 @@ $(document).ready(function(){initNavTree('FluxRobot_8h_source.html','');});
 <div class="ttc" id="classFluxRobot_html_a55d2406f800dddb8f7d4754ef5fb2ede"><div class="ttname"><a href="classFluxRobot.html#a55d2406f800dddb8f7d4754ef5fb2ede">FluxRobot::manager</a></div><div class="ttdeci">SubsystemManager &amp; manager</div><div class="ttdef"><b>Definition:</b> FluxRobot.h:20</div></div>
 <div class="ttc" id="classFluxRobot_html_aa5fcf98b4dfd539b1b49772381578dc8"><div class="ttname"><a href="classFluxRobot.html#aa5fcf98b4dfd539b1b49772381578dc8">FluxRobot::initSubsystems</a></div><div class="ttdeci">virtual void initSubsystems()=0</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_4948d4d0253e2d3fd811d8c3b574a981.html">Subsystems</a></li><li class="navelem"><a class="el" href="FluxRobot_8h.html">FluxRobot.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

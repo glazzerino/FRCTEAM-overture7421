@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -51,20 +44,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('files.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -109,21 +88,21 @@ $(document).ready(function(){initNavTree('files.html','');});
 <tr id="row_0_0_2_3_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="FluxSubsystem_8h_source.html"><span class="icondoc"></span></a><a class="el" href="FluxSubsystem_8h.html" target="_self">FluxSubsystem.h</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_2_4_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="SubsystemManager_8cpp.html" target="_self">SubsystemManager.cpp</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_2_5_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="SubsystemManager_8h_source.html"><span class="icondoc"></span></a><a class="el" href="SubsystemManager_8h.html" target="_self">SubsystemManager.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_3_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="main_2main_8cpp.html" target="_self">main.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_1_" class="arrow" onclick="toggleFolder('0_1_')">&#9660;</span><span id="img_0_1_" class="iconfopen" onclick="toggleFolder('0_1_')">&#160;</span><a class="el" href="dir_120ed4da3e3217b1e7fc0b4f48568e79.html" target="_self">test</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_1_0_" class="arrow" onclick="toggleFolder('0_1_0_')">&#9660;</span><span id="img_0_1_0_" class="iconfopen" onclick="toggleFolder('0_1_0_')">&#160;</span><a class="el" href="dir_8cf9eb761aaef6c28ec6f7bfa4ab471f.html" target="_self">cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_0_0_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="test_2cpp_2main_8cpp.html" target="_self">main.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_3_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_0_3_" class="arrow" onclick="toggleFolder('0_0_3_')">&#9660;</span><span id="img_0_0_3_" class="iconfopen" onclick="toggleFolder('0_0_3_')">&#160;</span><a class="el" href="dir_87c8a1521ffcc92bd11413a2c893a0b5.html" target="_self">Utilities</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_3_0_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="FluxVictor_8cpp.html" target="_self">FluxVictor.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_3_1_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="FluxVictor_8h_source.html"><span class="icondoc"></span></a><a class="el" href="FluxVictor_8h.html" target="_self">FluxVictor.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_4_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="main_2main_8cpp.html" target="_self">main.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_1_" class="arrow" onclick="toggleFolder('0_1_')">&#9660;</span><span id="img_0_1_" class="iconfopen" onclick="toggleFolder('0_1_')">&#160;</span><a class="el" href="dir_120ed4da3e3217b1e7fc0b4f48568e79.html" target="_self">test</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_1_0_" class="arrow" onclick="toggleFolder('0_1_0_')">&#9660;</span><span id="img_0_1_0_" class="iconfopen" onclick="toggleFolder('0_1_0_')">&#160;</span><a class="el" href="dir_8cf9eb761aaef6c28ec6f7bfa4ab471f.html" target="_self">cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_0_0_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="test_2cpp_2main_8cpp.html" target="_self">main.cpp</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

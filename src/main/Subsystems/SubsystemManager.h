@@ -10,6 +10,7 @@ class SubsystemManager {
             static SubsystemManager uniqueInstance;
             return uniqueInstance;
         }
+       
         void addSubsystem(const std::shared_ptr<FluxSubsystem> &newSys);
 
         void robotInit();

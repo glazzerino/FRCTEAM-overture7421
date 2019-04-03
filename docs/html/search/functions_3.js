@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['getinstance',['getInstance',['../classSubsystemManager.html#a3acce674e15d2534ed8a0877b78ac64d',1,'SubsystemManager']]],
-  ['getname',['getName',['../classFluxSubsystem.html#a661009e388711cd134d519160d1633ac',1,'FluxSubsystem']]]
+  ['fluxrobot',['FluxRobot',['../classFluxRobot.html#aaf20a889c03907de208317746f733d7a',1,'FluxRobot']]],
+  ['fluxsubsystem',['FluxSubsystem',['../classFluxSubsystem.html#ae1c7aa86576c8b74db9283df11f556d0',1,'FluxSubsystem']]],
+  ['fluxvictor',['FluxVictor',['../classFluxVictor.html#aaf6621fe1c9589a10dde59ca9de5a1a0',1,'FluxVictor']]]
 ];

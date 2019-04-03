@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Subsystems/FluxRobot.h"
 
+class PepoChassis;
+
 class Pepito : public FluxRobot {
 
     public:
@@ -21,4 +23,7 @@ class Pepito : public FluxRobot {
 
         void disabledInit() override;
         void disabledUpdate() override;
+    private:
+        std::shared_ptr<PepoChassis> pepoChassis;
+        
 };

@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "abdfgimprst",
   1: "dfprs",
   2: "bdfmprs",
-  3: "adfgimprt",
+  3: "abdfgimprt",
   4: "m"
 };
 
