@@ -57,5 +57,6 @@
     "optional": "cpp",
     "string_view": "cpp"
   },
-  "C_Cpp.configurationWarnings": "Disabled"
+  "C_Cpp.configurationWarnings": "Disabled",
+  "C_Cpp.errorSquiggles": "Disabled"
 }

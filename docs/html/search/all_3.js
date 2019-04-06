@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['fluxcontroller',['Fluxcontroller',['../classFluxcontroller.html',1,'Fluxcontroller'],['../classFluxcontroller.html#a1451c531fa6e91f5a1a34b7d06286846',1,'Fluxcontroller::Fluxcontroller()']]],
+  ['fluxcontroller_2ecpp',['FluxController.cpp',['../FluxController_8cpp.html',1,'']]],
+  ['fluxcontroller_2eh',['FluxController.h',['../FluxController_8h.html',1,'']]],
   ['fluxrobot',['FluxRobot',['../classFluxRobot.html',1,'FluxRobot'],['../classFluxRobot.html#aaf20a889c03907de208317746f733d7a',1,'FluxRobot::FluxRobot()']]],
   ['fluxrobot_2ecpp',['FluxRobot.cpp',['../FluxRobot_8cpp.html',1,'']]],
   ['fluxrobot_2eh',['FluxRobot.h',['../FluxRobot_8h.html',1,'']]],

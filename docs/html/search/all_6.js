@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2cpp_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_2main_8cpp.html',1,'(Global Namespace)'],['../test_2cpp_2main_8cpp.html',1,'(Global Namespace)']]],
-  ['manager',['manager',['../classFluxRobot.html#a55d2406f800dddb8f7d4754ef5fb2ede',1,'FluxRobot']]]
+  ['initsubsystems',['initSubsystems',['../classPepito.html#a420a3322a1fa658e9e40f277e7cc1c03',1,'Pepito::initSubsystems()'],['../classDelorean.html#a8ccfc53654ee0512a7e6ba1d6ba739c0',1,'Delorean::initSubsystems()'],['../classFluxRobot.html#aa5fcf98b4dfd539b1b49772381578dc8',1,'FluxRobot::initSubsystems()']]]
 ];

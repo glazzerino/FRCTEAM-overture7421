@@ -1,12 +1,15 @@
 #include "2019/Pepito/Pepito.h"
 #include "2019/Pepito/Mechs/Pepochassis.h"
+#include "2019/Mechs/CargoPod.h"
 Pepito::Pepito() : FluxRobot("Pepito") {
     
 }
 
 void Pepito::initSubsystems() {
     pepoChassis = std::make_shared<PepoChassis>();
+    cargoPod = std::make_shared<CargoPod>();
     manager.addSubsystem(pepoChassis);
+    manager.addSubsystem(cargoPod);
 }
 
 void Pepito::addProperties() {

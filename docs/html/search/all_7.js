@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['pepito',['Pepito',['../classPepito.html',1,'Pepito'],['../classPepito.html#a5cfed0e7fc2f459c9dd983e44f46ae53',1,'Pepito::Pepito()']]],
-  ['pepito_2ecpp',['Pepito.cpp',['../Pepito_8cpp.html',1,'']]],
-  ['pepito_2eh',['Pepito.h',['../Pepito_8h.html',1,'']]],
-  ['pepochassis',['PepoChassis',['../classPepoChassis.html',1,'PepoChassis'],['../classPepoChassis.html#a5915627651b6f2731ec21834c17e9dbe',1,'PepoChassis::PepoChassis()']]],
-  ['pepochassis_2ecpp',['Pepochassis.cpp',['../Pepochassis_8cpp.html',1,'']]],
-  ['pepochassis_2eh',['Pepochassis.h',['../Pepochassis_8h.html',1,'']]],
-  ['power',['Power',['../classFluxVictor.html#a84f42f074e9f6d9a3d385f5993e7cc21',1,'FluxVictor']]]
+  ['left',['LEFT',['../FluxController_8h.html#a899b1f99e0792573e6e4b51d84f78653adb45120aafd37a973140edee24708065',1,'FluxController.h']]],
+  ['leftjoystic',['leftJoystic',['../structAnalogStates.html#af2768e2c0f07d7a0edf57f31c9cf74d6',1,'AnalogStates']]],
+  ['lefttriggerpressed',['leftTriggerPressed',['../structAnalogStates.html#a4652c5984341b0b929ceb72b3248bcfb',1,'AnalogStates']]]
 ];

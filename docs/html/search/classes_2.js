@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['pepito',['Pepito',['../classPepito.html',1,'']]],
-  ['pepochassis',['PepoChassis',['../classPepoChassis.html',1,'']]]
+  ['fluxcontroller',['Fluxcontroller',['../classFluxcontroller.html',1,'']]],
+  ['fluxrobot',['FluxRobot',['../classFluxRobot.html',1,'']]],
+  ['fluxsubsystem',['FluxSubsystem',['../classFluxSubsystem.html',1,'']]],
+  ['fluxvictor',['FluxVictor',['../classFluxVictor.html',1,'']]]
 ];

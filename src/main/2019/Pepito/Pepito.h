@@ -3,11 +3,12 @@
 #include "Subsystems/FluxRobot.h"
 
 class PepoChassis;
-
+class CargoPod;
 class Pepito : public FluxRobot {
 
     public:
         Pepito();
+        
 
         void addProperties() override;
         void initSubsystems() override;
@@ -25,5 +26,5 @@ class Pepito : public FluxRobot {
         void disabledUpdate() override;
     private:
         std::shared_ptr<PepoChassis> pepoChassis;
-        
+        std::shared_ptr<CargoPod> cargoPod;
 };
