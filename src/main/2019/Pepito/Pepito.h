@@ -4,6 +4,7 @@
 
 class PepoChassis;
 class CargoPod;
+class Hatcher;
 class Pepito : public FluxRobot {
 
     public:
@@ -27,4 +28,5 @@ class Pepito : public FluxRobot {
     private:
         std::shared_ptr<PepoChassis> pepoChassis;
         std::shared_ptr<CargoPod> cargoPod;
+        std::shared_ptr<Hatcher> hatcher;
 };

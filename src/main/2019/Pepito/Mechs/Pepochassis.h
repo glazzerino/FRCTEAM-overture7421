@@ -7,6 +7,7 @@
 #include "frc/ADXRS450_Gyro.h"
 #include "Subsystems/DataPool.h"
 #include "frc/VictorSP.h"
+#include "Utilities/Piston.h"
 class PepoChassis : public FluxSubsystem {
     public:
         PepoChassis();
@@ -29,12 +30,14 @@ class PepoChassis : public FluxSubsystem {
         frc::ADXRS450_Gyro gyro;
         double leftJoystick ,rightJoystick = 0.0;
         VictorSPX leftVictor{0};
+        //VictorSPX leftSlave{3};
         VictorSPX rightVictor{5};
-        frc::VictorSP leftSlave{0};
-        frc::VictorSP rightSlave{1};
+        //frc::VictorSP rightSlave{0};
         bool useJoys = true;
       //1 ES GARRA
       // 0 y 5 SON CHASSIS
+      // 0 es rojo
+      // 
  
         
 };

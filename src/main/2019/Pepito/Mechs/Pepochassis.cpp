@@ -7,14 +7,14 @@ FluxSubsystem("Pepochassis") {
     float ramp = 1.0/4.0;
     //leftVictor.ConfigOpenloopRamp(ramp);
     //rightVictor.ConfigOpenloopRamp(ramp);
-    rightVictor.SetNeutralMode(Brake);
+   // rightVictor.SetNeutralMode(Brake);
     leftVictor.SetNeutralMode(Brake);
 }
 
 void PepoChassis::robotInit() {
-    rightVictor.ConfigVoltageCompSaturation(12.0,12.0);
+    //rightVictor.ConfigVoltageCompSaturation(12.0,12.0);
     leftVictor.ConfigVoltageCompSaturation(12.0,12.0);
-    rightVictor.EnableVoltageCompensation(true);
+    //rightVictor.EnableVoltageCompensation(true);
     leftVictor.EnableVoltageCompensation(true);
     std::cout << "PEPITO IS ONLINE" << "\n";
 }
@@ -30,9 +30,12 @@ void PepoChassis::teleopInit() {
 
 void PepoChassis::teleopUpdate() {
     leftVictor.Set(ControlMode::PercentOutput, -xbox.GetY(frc::XboxController::kLeftHand));
-    leftSlave.Set(-xbox.GetY(frc::XboxController::kLeftHand));
+    //leftSlave.Set(ControlMode::PercentOutput,-xbox.GetY(frc::XboxController::kLeftHand));
     rightVictor.Set(ControlMode::PercentOutput, xbox.GetY(frc::XboxController::kRightHand));
-    rightSlave.Set( xbox.GetY(frc::XboxController::kRightHand));
+    //rightSlave.Set( xbox.GetY(frc::XboxController::kRightHand));
+    
+   
+
     /*rightVictor.Set(ControlMode::PercentOutput, rightJoystick);
     if (xbox.GetAButton()) {
         frc::SmartDashboard::PutBoolean("BUTTON", true);

@@ -6,8 +6,8 @@ FluxSubsystem("CargoPod") {
     float ramp = 1.0/4.0;
     garra.ConfigOpenloopRamp(ramp);
     garra2.ConfigOpenloopRamp(ramp);
-    garra2.SetNeutralMode(Coast);
-    garra.SetNeutralMode(Coast);
+    garra2.SetNeutralMode(Brake);
+    garra.SetNeutralMode(Brake);
 }
 
 void CargoPod::robotInit() {
@@ -30,7 +30,13 @@ void CargoPod::teleopInit() {
 void CargoPod::teleopUpdate() {
     garra.Set(ControlMode::PercentOutput, xbox.GetY(frc::XboxController::kLeftHand));
     garra2.Set(ControlMode::PercentOutput, -xbox.GetY(frc::XboxController::kLeftHand));
-}
+
+    if (xbox.GetAButtonReleased()) {
+        pistons.Set(solenoidState);
+        solenoidState = !solenoidState;
+        }
+    }
+
 
 void CargoPod::autonInit(){
     ;
