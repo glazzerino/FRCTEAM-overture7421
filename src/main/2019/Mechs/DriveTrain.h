@@ -15,9 +15,8 @@ class Drivetrain : public FluxSubsystem {
         void disabledUpdate() override;
 
     private:
-        FluxVictor leftMaster{1};
-        FluxVictor rightMaster{2};
-        FluxVictor leftSlave{3};
-        FluxVictor rightSlave{4};
-        Fluxcontroller controller{0};
+        FluxVictor leftMaster{0};
+        FluxVictor leftSlave{5};
+        FluxVictor rightMaster{1};
+        FluxVictor rightSlave{3};
 };

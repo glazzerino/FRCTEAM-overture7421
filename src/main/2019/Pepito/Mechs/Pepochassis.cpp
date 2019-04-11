@@ -2,48 +2,74 @@
 
 PepoChassis::PepoChassis() :
 FluxSubsystem("Pepochassis") {
-    /*leftSlave.Set(ControlMode::Follower, leftVictor.GetDeviceID());
-    rightSlave.Set(ControlMode::Follower, rightVictor.GetDeviceID());*/
-    float ramp = 1.0/4.0;
-    //leftVictor.ConfigOpenloopRamp(ramp);
-    //rightVictor.ConfigOpenloopRamp(ramp);
-   // rightVictor.SetNeutralMode(Brake);
+    leftSlave.Set(ControlMode::Follower, leftVictor.GetDeviceID());
+    rightSlave.Set(ControlMode::Follower, rightVictor.GetDeviceID());
+    
+    leftVictor.ConfigOpenloopRamp(ramp);
+    rightVictor.ConfigOpenloopRamp(ramp);
+    rightVictor.SetNeutralMode(Brake);
     leftVictor.SetNeutralMode(Brake);
 }
 
 void PepoChassis::robotInit() {
-    //rightVictor.ConfigVoltageCompSaturation(12.0,12.0);
+    rightVictor.ConfigVoltageCompSaturation(12.0,12.0);
     leftVictor.ConfigVoltageCompSaturation(12.0,12.0);
-    //rightVictor.EnableVoltageCompensation(true);
+    rightVictor.EnableVoltageCompensation(true);
     leftVictor.EnableVoltageCompensation(true);
-    std::cout << "PEPITO IS ONLINE" << "\n";
-}
+    
+     std::cout << "PEPITO IS ONLINE" << "\n";
+    }
+   
+
 
 void PepoChassis::robotUpdate() {
-   /*leftVictor.Set(ControlMode::PercentOutput, leftJoystick);
-   rightVictor.Set(ControlMode::PercentOutput, leftJoystick);*/
+    if (xbox.GetY(frc::XboxController::kLeftHand) > 0.0) {
+        leftJoystick = powf(xbox.GetY(frc::XboxController::kLeftHand),2);
+    } else {
+        leftJoystick = powf(xbox.GetY(frc::XboxController::kLeftHand),2) * -1;
+    }
+    if (xbox.GetY(frc::XboxController::kRightHand) > 0.0) {
+        rightJoystick = powf(xbox.GetY(frc::XboxController::kRightHand),2);
+    } else {
+         rightJoystick = powf(xbox.GetY(frc::XboxController::kRightHand),2) * -1;
+    }
+
+    leftJoystick = xbox.GetY(frc::XboxController::kLeftHand);
+    rightJoystick = xbox.GetY(frc::XboxController::kRightHand);
 }
     
 void PepoChassis::teleopInit() {
-    std::cout << "TELEOP ENABLED" << "\n";
+    printf("TELEOP STARTED\n");
 }
 
 void PepoChassis::teleopUpdate() {
-    leftVictor.Set(ControlMode::PercentOutput, -xbox.GetY(frc::XboxController::kLeftHand));
-    //leftSlave.Set(ControlMode::PercentOutput,-xbox.GetY(frc::XboxController::kLeftHand));
-    rightVictor.Set(ControlMode::PercentOutput, xbox.GetY(frc::XboxController::kRightHand));
-    //rightSlave.Set( xbox.GetY(frc::XboxController::kRightHand));
     
-   
-
-    /*rightVictor.Set(ControlMode::PercentOutput, rightJoystick);
+    rightVictor.Set(ControlMode::PercentOutput, -leftJoystick);
+    leftVictor.Set(ControlMode::PercentOutput, rightJoystick);
+    if (xbox.GetStartButtonReleased()) {
+        switch (nitroState) {
+            case NITRO_STATE::ENABLED:
+                frc::SmartDashboard::PutBoolean("NITRO", false);
+                nitroState = NITRO_STATE::DISABLED;
+                rightVictor.ConfigOpenloopRamp(0.0);
+                leftVictor.ConfigOpenloopRamp(0.0);
+                break;
+            case NITRO_STATE::DISABLED:
+                frc::SmartDashboard::PutBoolean("NITRO", true);
+                    nitroState = NITRO_STATE::ENABLED;
+                    rightVictor.ConfigOpenloopRamp(ramp);
+                    leftVictor.ConfigOpenloopRamp(ramp);
+        }
+    }
+    
     if (xbox.GetAButton()) {
         frc::SmartDashboard::PutBoolean("BUTTON", true);
     } else {
         frc::SmartDashboard::PutBoolean("BUTTON", false);
     }
     cout << leftJoystick  << " " << rightJoystick<< "\n";
-*/
+
+
 }
 
 void PepoChassis::autonInit(){
@@ -51,7 +77,7 @@ void PepoChassis::autonInit(){
 }
 
 void PepoChassis::autonUpdate() {
-    ;
+        teleopUpdate();
 }
 
 void PepoChassis::disabledInit() {
@@ -61,3 +87,5 @@ void PepoChassis::disabledInit() {
 void PepoChassis::disabledUpdate() {
     ;
 }
+
+

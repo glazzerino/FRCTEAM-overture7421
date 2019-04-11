@@ -4,6 +4,7 @@
 #include "frc/XboxController.h"
 #include "Utilities/Piston.h"
 #include "frc/Solenoid.h"
+#include "frc/VictorSP.h"
 
 class CargoPod : public FluxSubsystem {
     public:
@@ -22,16 +23,20 @@ class CargoPod : public FluxSubsystem {
         void disabledUpdate() override;
 
     private:
+        void updateTeleopMovement();
+       
         frc::XboxController xbox{1};
-        FluxVictor garra{1};
-       // FluxVictor garra2{4};
-        TalonSRX garra2{4};
-        frc::Solenoid pistons{4};
-        //0 1 andy mark 
+       //6 7 lengua
+       //0 1 disco
+       frc::VictorSP garra2{0};
+       FluxVictor garra{4};
+        
         //4 macoi 
-        bool solenoidState = false;
-      //1 ES GARRA
-      // 0 y 5 SON CHASSIS
- 
+      //vic 1 ES GARRA
+      //vic 0 y 5 SON CHASSIS
+      bool solenoidState = true;
+      
+      frc::Solenoid cargoPistons{4};
+      bool cargoPistonsState = true;  
         
 };

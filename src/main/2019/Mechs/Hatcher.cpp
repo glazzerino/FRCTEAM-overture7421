@@ -13,14 +13,11 @@ void Hatcher::robotUpdate() {
 }
 
 void Hatcher::teleopInit() {
-    tongue.Project();
+    
 }
 
 void Hatcher::teleopUpdate() {
-    if (xbox.GetBButtonPressed()) {
-
-        //tongue.Set(frc::DoubleSolenoid::kForward);
-    }
+    updateTeleopMovement();
 }
 
 void Hatcher::disabledInit() {
@@ -35,5 +32,14 @@ void Hatcher::autonInit() {
 }
 
 void Hatcher::autonUpdate() {
+    updateTeleopMovement();
 
+}
+void Hatcher::updateTeleopMovement(){
+    if (xbox.GetBButtonPressed()) {
+        tongue.pushOrPull();
+    }
+    if (xbox.GetAButtonPressed()) {
+      hatcher.pushOrPull();
+    }
 }

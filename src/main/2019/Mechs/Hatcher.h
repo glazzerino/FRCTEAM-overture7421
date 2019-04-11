@@ -14,7 +14,10 @@ class Hatcher : public FluxSubsystem {
         void autonInit() override;
         void autonUpdate() override;
     private:
+        void updateTeleopMovement();
         Piston tongue{6,7};
-        
+        Piston hatcher{0,1};
+        bool tongueState = false;
+        bool hatcherState = false;
         frc::XboxController xbox{1};
 };
