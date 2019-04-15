@@ -6,7 +6,7 @@ Datapool::Datapool(){}
     static Datapool instance;
     return instance;
 }
-void Datapool::addData(const std::string &groupName,const std::string &memberName, double &value) {
+void Datapool::addData(const std::string &groupName,const std::string &memberName, double value) {
     std::map<std::string, double> member;
     member[memberName] = value;
     groups[groupName] = member;

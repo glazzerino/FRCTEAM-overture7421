@@ -8,4 +8,6 @@ class FluxVictor : public VictorSPX {
         FluxVictor(unsigned int port);
         void Power(double input);
         void Brake();
+    private:
+        bool setNegateBool = false;
 };

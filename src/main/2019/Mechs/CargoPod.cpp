@@ -3,26 +3,22 @@
 CargoPod::CargoPod() :
     FluxSubsystem("CargoPod") {
 
-    float ramp = 1.0/4.0;
+    float ramp = 1.0/5.0;
     garra.ConfigOpenloopRamp(ramp);
    
     garra.SetNeutralMode(Brake);
 }
 
 void CargoPod::robotInit() {
-    std::cout << "CARGO ONLINE" << "\n";
-    
-    garra.ConfigVoltageCompSaturation(12.0,12.0);
-   
-    garra.EnableVoltageCompensation(true);
+    std::cout << "CARGO POD ONLINE" << "\n";
 }
 
 void CargoPod::robotUpdate() {
-   
+   frc::SmartDashboard::PutBoolean("cargoPistons",cargoPistons.Get());
 }
 
 void CargoPod::teleopInit() {
-
+    //cargoPistons.Set(false);
 }
 
 void CargoPod::teleopUpdate() {
@@ -36,11 +32,13 @@ void CargoPod::autonInit() {
 
 void CargoPod::autonUpdate() {
     updateTeleopMovement();
-
 }
 
 void CargoPod::disabledInit() {
-    ;
+   /* if (!cargoPistons.Get()){
+         cargoPistons.Set(true);
+    }*/
+   ;
 }
 
 void CargoPod::disabledUpdate() {
@@ -55,4 +53,9 @@ void CargoPod::updateTeleopMovement(){
         solenoidState = !solenoidState;
         cargoPistons.Set(solenoidState);
     }
+    if (xbox.GetXButtonPressed()) {
+        habState = !habState;
+        habPiston.Set(habState);
+    }
+    
 }

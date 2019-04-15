@@ -8,7 +8,7 @@ class Datapool {
         static Datapool& getInstance();
         void Print();
         double getData(const std::string &groupName,const std::string &sysName);
-        void addData(const std::string &groupName,const std::string &memberName,double &value);
+        void addData(const std::string &groupName,const std::string &memberName,double value);
     private:
         Datapool();
         Datapool(Datapool const&) = delete;

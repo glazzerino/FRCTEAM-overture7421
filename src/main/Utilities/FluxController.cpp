@@ -21,5 +21,11 @@ double Fluxcontroller::joystick(GenericHID::JoystickHand hand) {
             multiplier = -multiplier;
         }
         return pow(XboxController::GetY(hand),2) * multiplier;
+    } else {
+        return XboxController::GetY(hand);
     }
+}
+
+void Fluxcontroller::negate(bool input) {
+    negateOutputs = input;
 }

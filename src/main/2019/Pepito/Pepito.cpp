@@ -20,7 +20,7 @@ void Pepito::addProperties() {
 }
 
 void Pepito::robotInit() {
-    std::cout << "GOT HERE" << "\n";
+    
 }
 
 void Pepito::robotUpdate() {

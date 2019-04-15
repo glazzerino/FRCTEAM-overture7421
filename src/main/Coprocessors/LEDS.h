@@ -1,10 +1,12 @@
-#include "frc/Encoder.h"
+#pragma once
+#include "frc/SerialPort.h"
 #include "Subsystems/FluxSubsystem.h"
 #include "Subsystems/Datapool.h"
+#include <sstream>
 using namespace frc;
-class Odometry : public FluxSubsystem {
+class LEDS: public FluxSubsystem, public SerialPort {
     public:
-        Odometry();
+        LEDS();
         void robotInit() override;
         void robotUpdate() override;
         void teleopInit() override;
@@ -14,8 +16,7 @@ class Odometry : public FluxSubsystem {
         void disabledInit() override;
         void disabledUpdate() override;
     private:
-        /*Encoder leftEnc{1,2};
-        Encoder rightEnc{3,4};*/
-}
-
-
+        Datapool &datapool = Datapool::getInstance();
+        double speed = 0.0;
+        std::stringstream packet;
+};

@@ -1,7 +1,7 @@
 #include "Subsystems/FluxRobot.h"
 
 FluxRobot::FluxRobot(const std::string &robotName) : TimedRobot(), 
-FluxSubsystem(robotName){
+    FluxSubsystem(robotName){
 }
 
 void FluxRobot::RobotInit() {

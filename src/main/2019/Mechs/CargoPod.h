@@ -5,7 +5,8 @@
 #include "Utilities/Piston.h"
 #include "frc/Solenoid.h"
 #include "frc/VictorSP.h"
-
+#include "Subsystems/Datapool.h"
+#include "frc/smartdashboard/SmartDashboard.h"
 class CargoPod : public FluxSubsystem {
     public:
         CargoPod();
@@ -24,19 +25,20 @@ class CargoPod : public FluxSubsystem {
 
     private:
         void updateTeleopMovement();
-       
+        Datapool &datapool = Datapool::getInstance();
         frc::XboxController xbox{1};
-       //6 7 lengua
-       //0 1 disco
-       frc::VictorSP garra2{0};
-       FluxVictor garra{4};
+        //6 7 lengua
+        //0 1 disco
+        frc::VictorSP garra2{0};
+        FluxVictor garra{4};
+            //4 macoi 
+        //vic 1 ES GARRA
+        //vic 0 y 5 SON CHASSIS
+        bool solenoidState = true;
         
-        //4 macoi 
-      //vic 1 ES GARRA
-      //vic 0 y 5 SON CHASSIS
-      bool solenoidState = true;
-      
-      frc::Solenoid cargoPistons{4};
-      bool cargoPistonsState = true;  
-        
+        frc::Solenoid cargoPistons{4};
+        bool cargoPistonsState = false;  
+        frc::Solenoid habPiston{5};
+        //Hydrolix's
+        bool habState = false;
 };
