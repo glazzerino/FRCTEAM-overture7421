@@ -4,7 +4,13 @@ Delorean::Delorean() : FluxRobot("Delorean") {
 }
 
 void Delorean::initSubsystems() {
-    ;
+    cargoPod  = std::make_shared<CargoPod>();
+    hatcher = std::make_shared<Hatcher>();
+    chassis = std::make_shared<FluxChassis>();
+
+    manager.addSubsystem(cargoPod);
+    manager.addSubsystem(hatcher);
+    manager.addSubsystem(chassis);
 }
 
 void Delorean::addProperties() {

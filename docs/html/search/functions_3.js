@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['fluxcontroller',['Fluxcontroller',['../classFluxcontroller.html#a1451c531fa6e91f5a1a34b7d06286846',1,'Fluxcontroller']]],
-  ['fluxrobot',['FluxRobot',['../classFluxRobot.html#aaf20a889c03907de208317746f733d7a',1,'FluxRobot']]],
-  ['fluxsubsystem',['FluxSubsystem',['../classFluxSubsystem.html#ae1c7aa86576c8b74db9283df11f556d0',1,'FluxSubsystem']]],
-  ['fluxvictor',['FluxVictor',['../classFluxVictor.html#aaf6621fe1c9589a10dde59ca9de5a1a0',1,'FluxVictor']]]
+  ['delorean',['Delorean',['../classDelorean.html#a80afc6fe9ba8edac0af62189b8afbbd3',1,'Delorean']]],
+  ['disabledinit',['disabledInit',['../classCargoPod.html#a924ef514ed33ea4e7f7ef966f5b83fa7',1,'CargoPod::disabledInit()'],['../classDrivetrain.html#ac6fe041de609bdb45eac65282fbdf507',1,'Drivetrain::disabledInit()'],['../classHatcher.html#a2e61639f734ec3a5627b655695bbadf1',1,'Hatcher::disabledInit()'],['../classPepoChassis.html#af5f6848de51ac4c47cbf2f9f706b1485',1,'PepoChassis::disabledInit()'],['../classPepito.html#a04a85eae33c653f9555b6db43d50b210',1,'Pepito::disabledInit()'],['../classDelorean.html#ae054ba79b38b46d20e50becb5d31884c',1,'Delorean::disabledInit()'],['../classOdometry.html#a0df3b0180a8fa5a01a9e441de112140e',1,'Odometry::disabledInit()'],['../classFluxSubsystem.html#aa0b8fde8aa5094627d15d24e545e1da4',1,'FluxSubsystem::disabledInit()']]],
+  ['disabledupdate',['disabledUpdate',['../classCargoPod.html#a71b58a975ba9f20f4a9023aa3fcbba0e',1,'CargoPod::disabledUpdate()'],['../classDrivetrain.html#a46aa479a25757868bfda71081ec7baa2',1,'Drivetrain::disabledUpdate()'],['../classHatcher.html#ab6bb222ab940507490f2009f3113bc41',1,'Hatcher::disabledUpdate()'],['../classPepoChassis.html#a33af04df9c2396d6197f3298172763d9',1,'PepoChassis::disabledUpdate()'],['../classPepito.html#afc29a2b7ac94a47381ca213dc2993c39',1,'Pepito::disabledUpdate()'],['../classDelorean.html#acc8f7d93dd894233d16f34316d363983',1,'Delorean::disabledUpdate()'],['../classOdometry.html#aef83c6c62c8e992b20759aec705c2ee8',1,'Odometry::disabledUpdate()'],['../classFluxSubsystem.html#a5c39cb0f0834cc77a2b8f4f47778da87',1,'FluxSubsystem::disabledUpdate()']]],
+  ['disableinit',['disableInit',['../classSubsystemManager.html#ac8f796d38c36f76798e992d1b1e3baef',1,'SubsystemManager']]],
+  ['disableupdate',['disableUpdate',['../classSubsystemManager.html#a1c7c92c55c60928d08eec651074e74e2',1,'SubsystemManager']]],
+  ['drivetrain',['Drivetrain',['../classDrivetrain.html#abfcc3eea7516b5f76422d39676adbd27',1,'Drivetrain']]]
 ];

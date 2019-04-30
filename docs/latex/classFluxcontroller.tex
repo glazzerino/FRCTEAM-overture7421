@@ -15,16 +15,16 @@ Inheritance diagram for Fluxcontroller\+:\begin{figure}[H]
 \item 
 \hyperlink{classFluxcontroller_a1451c531fa6e91f5a1a34b7d06286846}{Fluxcontroller} (unsigned int U\+S\+B\+Port)
 \item 
-bool \hyperlink{classFluxcontroller_a4d561daf0111359a6a1361be49cdf7dd}{trigger\+Pressed} (\hyperlink{FluxController_8h_a899b1f99e0792573e6e4b51d84f78653}{H\+A\+ND} hand)
+double \hyperlink{classFluxcontroller_ab3801948ee5152689b8d8e8ac6e92856}{joystick} (Generic\+H\+I\+D\+::\+Joystick\+Hand)
 \item 
-bool \hyperlink{classFluxcontroller_a67883b472160e2b316ba96685cecd925}{trigger\+Released} (\hyperlink{FluxController_8h_a899b1f99e0792573e6e4b51d84f78653}{H\+A\+ND} hand)
+void \hyperlink{classFluxcontroller_a82147680c873b1da821dfb48a38f0b9a}{set\+Exp\+Joystick} (bool input)
 \item 
-void \hyperlink{classFluxcontroller_a70817ff24cbaf6029c69e5213b0bae90}{update\+Inputs} ()
+void \hyperlink{classFluxcontroller_ac2d888be1a50f85ccbae685171d5359f}{negate} (bool input)
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This class wraps Xbox\+Controller to add trigger activation booleans. This class is built to be applied to a subsystem. N\+O\+TE\+: Future version will be a susbsytem of it\textquotesingle{}s own 
+This class adds some overture goodies to input mode 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classFluxcontroller_a1451c531fa6e91f5a1a34b7d06286846}\label{classFluxcontroller_a1451c531fa6e91f5a1a34b7d06286846}} 
@@ -36,23 +36,23 @@ This class wraps Xbox\+Controller to add trigger activation booleans. This class
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classFluxcontroller_a4d561daf0111359a6a1361be49cdf7dd}\label{classFluxcontroller_a4d561daf0111359a6a1361be49cdf7dd}} 
-\index{Fluxcontroller@{Fluxcontroller}!trigger\+Pressed@{trigger\+Pressed}}
-\index{trigger\+Pressed@{trigger\+Pressed}!Fluxcontroller@{Fluxcontroller}}
-\subsubsection{\texorpdfstring{trigger\+Pressed()}{triggerPressed()}}
-{\footnotesize\ttfamily bool Fluxcontroller\+::trigger\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{FluxController_8h_a899b1f99e0792573e6e4b51d84f78653}{H\+A\+ND}}]{hand }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classFluxcontroller_ab3801948ee5152689b8d8e8ac6e92856}\label{classFluxcontroller_ab3801948ee5152689b8d8e8ac6e92856}} 
+\index{Fluxcontroller@{Fluxcontroller}!joystick@{joystick}}
+\index{joystick@{joystick}!Fluxcontroller@{Fluxcontroller}}
+\subsubsection{\texorpdfstring{joystick()}{joystick()}}
+{\footnotesize\ttfamily double Fluxcontroller\+::joystick (\begin{DoxyParamCaption}\item[{Generic\+H\+I\+D\+::\+Joystick\+Hand}]{hand }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classFluxcontroller_a67883b472160e2b316ba96685cecd925}\label{classFluxcontroller_a67883b472160e2b316ba96685cecd925}} 
-\index{Fluxcontroller@{Fluxcontroller}!trigger\+Released@{trigger\+Released}}
-\index{trigger\+Released@{trigger\+Released}!Fluxcontroller@{Fluxcontroller}}
-\subsubsection{\texorpdfstring{trigger\+Released()}{triggerReleased()}}
-{\footnotesize\ttfamily bool Fluxcontroller\+::trigger\+Released (\begin{DoxyParamCaption}\item[{\hyperlink{FluxController_8h_a899b1f99e0792573e6e4b51d84f78653}{H\+A\+ND}}]{hand }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classFluxcontroller_ac2d888be1a50f85ccbae685171d5359f}\label{classFluxcontroller_ac2d888be1a50f85ccbae685171d5359f}} 
+\index{Fluxcontroller@{Fluxcontroller}!negate@{negate}}
+\index{negate@{negate}!Fluxcontroller@{Fluxcontroller}}
+\subsubsection{\texorpdfstring{negate()}{negate()}}
+{\footnotesize\ttfamily void Fluxcontroller\+::negate (\begin{DoxyParamCaption}\item[{bool}]{input }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classFluxcontroller_a70817ff24cbaf6029c69e5213b0bae90}\label{classFluxcontroller_a70817ff24cbaf6029c69e5213b0bae90}} 
-\index{Fluxcontroller@{Fluxcontroller}!update\+Inputs@{update\+Inputs}}
-\index{update\+Inputs@{update\+Inputs}!Fluxcontroller@{Fluxcontroller}}
-\subsubsection{\texorpdfstring{update\+Inputs()}{updateInputs()}}
-{\footnotesize\ttfamily void Fluxcontroller\+::update\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classFluxcontroller_a82147680c873b1da821dfb48a38f0b9a}\label{classFluxcontroller_a82147680c873b1da821dfb48a38f0b9a}} 
+\index{Fluxcontroller@{Fluxcontroller}!set\+Exp\+Joystick@{set\+Exp\+Joystick}}
+\index{set\+Exp\+Joystick@{set\+Exp\+Joystick}!Fluxcontroller@{Fluxcontroller}}
+\subsubsection{\texorpdfstring{set\+Exp\+Joystick()}{setExpJoystick()}}
+{\footnotesize\ttfamily void Fluxcontroller\+::set\+Exp\+Joystick (\begin{DoxyParamCaption}\item[{bool}]{input }\end{DoxyParamCaption})}
 
 
 

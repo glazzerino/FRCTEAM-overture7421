@@ -2,5 +2,5 @@
 #include "2019/Pepito/Pepito.h"
 
 int main() {
-    return frc::StartRobot<Pepito>();
+    return frc::StartRobot<Delorean>();
 }

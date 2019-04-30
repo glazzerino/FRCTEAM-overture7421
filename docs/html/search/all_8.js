@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2cpp_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_2main_8cpp.html',1,'(Global Namespace)'],['../test_2cpp_2main_8cpp.html',1,'(Global Namespace)']]],
-  ['manager',['manager',['../classFluxRobot.html#a55d2406f800dddb8f7d4754ef5fb2ede',1,'FluxRobot']]]
+  ['joystick',['joystick',['../classFluxcontroller.html#ab3801948ee5152689b8d8e8ac6e92856',1,'Fluxcontroller']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updateinputs',['updateInputs',['../classFluxcontroller.html#a70817ff24cbaf6029c69e5213b0bae90',1,'Fluxcontroller']]]
+  ['negate',['negate',['../classFluxcontroller.html#ac2d888be1a50f85ccbae685171d5359f',1,'Fluxcontroller']]]
 ];

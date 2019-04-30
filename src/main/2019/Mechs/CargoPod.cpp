@@ -2,15 +2,17 @@
 
 CargoPod::CargoPod() :
     FluxSubsystem("CargoPod") {
-
     float ramp = 1.0/5.0;
     garra.ConfigOpenloopRamp(ramp);
-   
+    garra2.SetInverted(true);
     garra.SetNeutralMode(Brake);
 }
 
 void CargoPod::robotInit() {
+   
     std::cout << "CARGO POD ONLINE" << "\n";
+    cargoPistons.Set(false);
+    
 }
 
 void CargoPod::robotUpdate() {
@@ -18,7 +20,7 @@ void CargoPod::robotUpdate() {
 }
 
 void CargoPod::teleopInit() {
-    //cargoPistons.Set(false);
+;
 }
 
 void CargoPod::teleopUpdate() {
@@ -35,27 +37,25 @@ void CargoPod::autonUpdate() {
 }
 
 void CargoPod::disabledInit() {
-   /* if (!cargoPistons.Get()){
-         cargoPistons.Set(true);
-    }*/
-   ;
+  ;
 }
 
 void CargoPod::disabledUpdate() {
-    ;
+   if (!done) {
+        cargoPistons.Set(false);
+        
+   }
+  
 }
 
 void CargoPod::updateTeleopMovement(){
     garra.Set(ControlMode::PercentOutput, xbox.GetY(frc::XboxController::kLeftHand));
-    garra2.Set(xbox.GetY(frc::XboxController::kRightHand));
-
+    garra2.Set(ControlMode::PercentOutput,xbox.GetY(frc::XboxController::kRightHand));
+    //std::cout << "cargo piston: " << cargoPistons.Get() << " habPistons: " << habPiston.Get() <<"\n";
     if (xbox.GetYButtonPressed()) {
-        solenoidState = !solenoidState;
-        cargoPistons.Set(solenoidState);
+        cargoPistons.Set(!cargoPistons.Get());
     }
     if (xbox.GetXButtonPressed()) {
-        habState = !habState;
-        habPiston.Set(habState);
+       habPiston.pushOrPull();
     }
-    
 }

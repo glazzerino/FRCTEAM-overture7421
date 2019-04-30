@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['pepito',['Pepito',['../classPepito.html',1,'Pepito'],['../classPepito.html#a5cfed0e7fc2f459c9dd983e44f46ae53',1,'Pepito::Pepito()']]],
-  ['pepito_2ecpp',['Pepito.cpp',['../Pepito_8cpp.html',1,'']]],
-  ['pepito_2eh',['Pepito.h',['../Pepito_8h.html',1,'']]],
-  ['pepochassis',['PepoChassis',['../classPepoChassis.html',1,'PepoChassis'],['../classPepoChassis.html#a5915627651b6f2731ec21834c17e9dbe',1,'PepoChassis::PepoChassis()']]],
-  ['pepochassis_2ecpp',['Pepochassis.cpp',['../Pepochassis_8cpp.html',1,'']]],
-  ['pepochassis_2eh',['Pepochassis.h',['../Pepochassis_8h.html',1,'']]],
-  ['power',['Power',['../classFluxVictor.html#a84f42f074e9f6d9a3d385f5993e7cc21',1,'FluxVictor']]]
+  ['main',['main',['../main_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2cpp_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
+  ['main_2ecpp',['main.cpp',['../main_2main_8cpp.html',1,'(Global Namespace)'],['../test_2cpp_2main_8cpp.html',1,'(Global Namespace)']]],
+  ['manager',['manager',['../classFluxRobot.html#a55d2406f800dddb8f7d4754ef5fb2ede',1,'FluxRobot']]]
 ];

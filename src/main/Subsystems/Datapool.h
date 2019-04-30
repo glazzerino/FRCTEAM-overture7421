@@ -3,6 +3,9 @@
 #include <iostream>
 #include <map>
 
+/**
+ * Singleton that allows to share info between subsystems, currently relies solely on a string double k v pair
+ * */
 class Datapool {
     public:
         static Datapool& getInstance();
@@ -15,5 +18,4 @@ class Datapool {
         void operator=(Datapool const&) = delete;
         static Datapool& instance;
         std::map<std::string, std::map<std::string, double>> groups;
-       
 };

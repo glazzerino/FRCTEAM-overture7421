@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include "Subsystems/FluxRobot.h"
-#include "2019/Mechs/DriveTrain.h"
+#include "Subsystems/FluxChassis.h"
+#include "2019/Mechs/CargoPod.h"
+#include "2019/Mechs/Hatcher.h"
 
 class Delorean : public FluxRobot {
 
@@ -22,4 +24,8 @@ class Delorean : public FluxRobot {
 
         void disabledInit() override;
         void disabledUpdate() override;
+    private:
+        std::shared_ptr<FluxChassis> chassis;
+        std::shared_ptr<CargoPod> cargoPod;
+        std::shared_ptr<Hatcher> hatcher;
 };

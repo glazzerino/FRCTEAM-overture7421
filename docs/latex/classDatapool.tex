@@ -1,0 +1,56 @@
+\hypertarget{classDatapool}{}\section{Datapool Class Reference}
+\label{classDatapool}\index{Datapool@{Datapool}}
+
+
+{\ttfamily \#include $<$Datapool.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDatapool_afae02fe80bca3b1978317f2f7be8bec1}{Print} ()
+\item 
+double \hyperlink{classDatapool_a005421262c8c1a71fa93d167492ebb50}{get\+Data} (const std\+::string \&group\+Name, const std\+::string \&sys\+Name)
+\item 
+void \hyperlink{classDatapool_a4dcd17302657042344f3a1bcefce704f}{add\+Data} (const std\+::string \&group\+Name, const std\+::string \&member\+Name, double value)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDatapool}{Datapool} \& \hyperlink{classDatapool_a9cfbb881291c80d851d0df66341b6299}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singleton that allows to share info between subsystems, currently relies solely on a string double k v pair 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatapool_a4dcd17302657042344f3a1bcefce704f}\label{classDatapool_a4dcd17302657042344f3a1bcefce704f}} 
+\index{Datapool@{Datapool}!add\+Data@{add\+Data}}
+\index{add\+Data@{add\+Data}!Datapool@{Datapool}}
+\subsubsection{\texorpdfstring{add\+Data()}{addData()}}
+{\footnotesize\ttfamily void Datapool\+::add\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+Name,  }\item[{const std\+::string \&}]{member\+Name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDatapool_a005421262c8c1a71fa93d167492ebb50}\label{classDatapool_a005421262c8c1a71fa93d167492ebb50}} 
+\index{Datapool@{Datapool}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Datapool@{Datapool}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily double Datapool\+::get\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+Name,  }\item[{const std\+::string \&}]{sys\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDatapool_a9cfbb881291c80d851d0df66341b6299}\label{classDatapool_a9cfbb881291c80d851d0df66341b6299}} 
+\index{Datapool@{Datapool}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Datapool@{Datapool}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \hyperlink{classDatapool}{Datapool} \& Datapool\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classDatapool_afae02fe80bca3b1978317f2f7be8bec1}\label{classDatapool_afae02fe80bca3b1978317f2f7be8bec1}} 
+\index{Datapool@{Datapool}!Print@{Print}}
+\index{Print@{Print}!Datapool@{Datapool}}
+\subsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Datapool\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/main/\+Subsystems/\hyperlink{Datapool_8h}{Datapool.\+h}\item 
+src/main/\+Subsystems/\hyperlink{Datapool_8cpp}{Datapool.\+cpp}\end{DoxyCompactItemize}

@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['teleopinit',['teleopInit',['../classDrivetrain.html#a12d7edbb3a1b5d4ffa4ecb381c1ab115',1,'Drivetrain::teleopInit()'],['../classPepoChassis.html#a44dbc37a56fe98d7b57af840e8da73b2',1,'PepoChassis::teleopInit()'],['../classPepito.html#a5001bee2d7dcc225c87ac36d5eddc452',1,'Pepito::teleopInit()'],['../classDelorean.html#a789c6e4e70f4e2cfdf944d1a1a149509',1,'Delorean::teleopInit()'],['../classFluxSubsystem.html#aec6d05e4f80c3783684598fb92ad2e55',1,'FluxSubsystem::teleopInit()'],['../classSubsystemManager.html#a78e19880c05e4e2219bb5b8cf40607da',1,'SubsystemManager::teleopInit()'],['../classRobot.html#aa3e246794bfbbb4406fc87f351762038',1,'Robot::TeleopInit()']]],
-  ['teleopperiodic',['TeleopPeriodic',['../classRobot.html#a324322627c63b3870daf7c7ddc5bea63',1,'Robot']]],
-  ['teleopupdate',['teleopUpdate',['../classDrivetrain.html#a3b6bdf96a9388285c7560b2fedfc7ca1',1,'Drivetrain::teleopUpdate()'],['../classPepoChassis.html#af863b7df039af7051b08c051f744e429',1,'PepoChassis::teleopUpdate()'],['../classPepito.html#ac19e921b35d2d76cb5b6a2105b26f568',1,'Pepito::teleopUpdate()'],['../classDelorean.html#a6053dfc106d71fcffa30bac0f5e9b5b8',1,'Delorean::teleopUpdate()'],['../classFluxSubsystem.html#a327d76affc60699bfa62563e364e42f5',1,'FluxSubsystem::teleopUpdate()'],['../classSubsystemManager.html#ac55642f09846465e4482af14d835d98e',1,'SubsystemManager::teleopUpdate()']]],
-  ['testinit',['TestInit',['../classRobot.html#a9ac222d45d30a6d0c572fd36d18c6ccc',1,'Robot']]],
-  ['testperiodic',['TestPeriodic',['../classRobot.html#af0ac44a962e609e9b042285e699d1db8',1,'Robot']]],
-  ['triggerpressed',['triggerPressed',['../classFluxcontroller.html#a4d561daf0111359a6a1361be49cdf7dd',1,'Fluxcontroller']]],
-  ['triggerreleased',['triggerReleased',['../classFluxcontroller.html#a67883b472160e2b316ba96685cecd925',1,'Fluxcontroller']]]
+  ['main',['main',['../main_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2cpp_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]]
 ];

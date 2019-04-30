@@ -81,15 +81,15 @@ Inheritance diagram for Fluxcontroller:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1451c531fa6e91f5a1a34b7d06286846"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#a1451c531fa6e91f5a1a34b7d06286846">Fluxcontroller</a> (unsigned int USBPort)</td></tr>
 <tr class="separator:a1451c531fa6e91f5a1a34b7d06286846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d561daf0111359a6a1361be49cdf7dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#a4d561daf0111359a6a1361be49cdf7dd">triggerPressed</a> (<a class="el" href="FluxController_8h.html#a899b1f99e0792573e6e4b51d84f78653">HAND</a> hand)</td></tr>
-<tr class="separator:a4d561daf0111359a6a1361be49cdf7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67883b472160e2b316ba96685cecd925"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#a67883b472160e2b316ba96685cecd925">triggerReleased</a> (<a class="el" href="FluxController_8h.html#a899b1f99e0792573e6e4b51d84f78653">HAND</a> hand)</td></tr>
-<tr class="separator:a67883b472160e2b316ba96685cecd925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70817ff24cbaf6029c69e5213b0bae90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#a70817ff24cbaf6029c69e5213b0bae90">updateInputs</a> ()</td></tr>
-<tr class="separator:a70817ff24cbaf6029c69e5213b0bae90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3801948ee5152689b8d8e8ac6e92856"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#ab3801948ee5152689b8d8e8ac6e92856">joystick</a> (GenericHID::JoystickHand)</td></tr>
+<tr class="separator:ab3801948ee5152689b8d8e8ac6e92856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82147680c873b1da821dfb48a38f0b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#a82147680c873b1da821dfb48a38f0b9a">setExpJoystick</a> (bool input)</td></tr>
+<tr class="separator:a82147680c873b1da821dfb48a38f0b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d888be1a50f85ccbae685171d5359f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFluxcontroller.html#ac2d888be1a50f85ccbae685171d5359f">negate</a> (bool input)</td></tr>
+<tr class="separator:ac2d888be1a50f85ccbae685171d5359f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class wraps XboxController to add trigger activation booleans. This class is built to be applied to a subsystem. NOTE: Future version will be a susbsytem of it's own </p>
+<div class="textblock"><p>This class adds some overture goodies to input mode </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1451c531fa6e91f5a1a34b7d06286846"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1451c531fa6e91f5a1a34b7d06286846">&#9670;&nbsp;</a></span>Fluxcontroller()</h2>
@@ -110,16 +110,16 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4d561daf0111359a6a1361be49cdf7dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d561daf0111359a6a1361be49cdf7dd">&#9670;&nbsp;</a></span>triggerPressed()</h2>
+<a id="ab3801948ee5152689b8d8e8ac6e92856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3801948ee5152689b8d8e8ac6e92856">&#9670;&nbsp;</a></span>joystick()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Fluxcontroller::triggerPressed </td>
+          <td class="memname">double Fluxcontroller::joystick </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="FluxController_8h.html#a899b1f99e0792573e6e4b51d84f78653">HAND</a>&#160;</td>
+          <td class="paramtype">GenericHID::JoystickHand&#160;</td>
           <td class="paramname"><em>hand</em></td><td>)</td>
           <td></td>
         </tr>
@@ -128,17 +128,17 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a67883b472160e2b316ba96685cecd925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67883b472160e2b316ba96685cecd925">&#9670;&nbsp;</a></span>triggerReleased()</h2>
+<a id="ac2d888be1a50f85ccbae685171d5359f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d888be1a50f85ccbae685171d5359f">&#9670;&nbsp;</a></span>negate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Fluxcontroller::triggerReleased </td>
+          <td class="memname">void Fluxcontroller::negate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="FluxController_8h.html#a899b1f99e0792573e6e4b51d84f78653">HAND</a>&#160;</td>
-          <td class="paramname"><em>hand</em></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -146,16 +146,17 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a70817ff24cbaf6029c69e5213b0bae90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70817ff24cbaf6029c69e5213b0bae90">&#9670;&nbsp;</a></span>updateInputs()</h2>
+<a id="a82147680c873b1da821dfb48a38f0b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82147680c873b1da821dfb48a38f0b9a">&#9670;&nbsp;</a></span>setExpJoystick()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Fluxcontroller::updateInputs </td>
+          <td class="memname">void Fluxcontroller::setExpJoystick </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
