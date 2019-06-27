@@ -28,18 +28,10 @@ class CargoPod : public FluxSubsystem {
         void updateTeleopMovement();
         Datapool &datapool = Datapool::getInstance();
         frc::XboxController xbox{1};
-        //6 7 lengua
-        //0 1 disco
-        FluxVictor garra2{3};
-        FluxVictor garra{2};
-            //4 macoi 
-        //vic 1 ES GARRA
-        //vic 0 y 5 SON CHASSIS
+        FluxVictor garra2{4};
+        FluxVictor garra{8};
         bool solenoidState = true;
-        
         frc::Solenoid cargoPistons{4};
         bool cargoPistonsState = false;  
-        Piston habPiston{5,3};
-        //Hydrolix's
         bool done = false;
 };

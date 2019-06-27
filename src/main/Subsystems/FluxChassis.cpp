@@ -1,32 +1,27 @@
 #include "Subsystems/FluxChassis.h"
 
 FluxChassis::FluxChassis() : FluxSubsystem("FluxChassis") {
-    leftSlave.Set(ControlMode::Follower, leftMaster.GetDeviceID());
-    rightSlave.Set(ControlMode::Follower, rightMaster.GetDeviceID());
-
-    rightMaster.SetInverted(true);
-
-    rightMaster.ConfigVoltageCompSaturation(12.0);
-    rightSlave.ConfigVoltageCompSaturation(12.0);
-    leftMaster.ConfigVoltageCompSaturation(12.0);
-    leftSlave.ConfigVoltageCompSaturation(12.0);
-    
-    leftMaster.ConfigOpenloopRamp(ramp);
-    rightMaster.ConfigOpenloopRamp(ramp);
-    rightMaster.EnableVoltageCompensation(true);
-    leftMaster.EnableVoltageCompensation(true);
+    rightGear.ConfigOpenLoopRamp(ramp);
+    leftGear.ConfigOpenLoopRamp(ramp);
+    rightGear.ConfigVoltageCompSaturation(12.0);
+    leftGear.ConfigVoltageCompSaturation(12.0);
     auto nt = nt::NetworkTableInstance::GetDefault();
     visionTable = nt.GetTable("ChickenVision");
+   
+    
 }
 
 void FluxChassis::robotInit() {
     frc::SmartDashboard::PutNumber("Max ang vel vision", 30.0);
     frc::SmartDashboard::PutNumber("heading kP", 0.01);
-    frc::SmartDashboard::PutNumber("heading kI", 0.0);
-    frc::SmartDashboard::PutNumber("heading kD", 0.004);
+    frc::SmartDashboard::PutNumber("heading kI", 0.0000001);
+    frc::SmartDashboard::PutNumber("heading kD", 0.002);
     headingController.setUpperLimit(180.0);
     headingController.setLowerLimit(-180.0);
     headingController.setContinous(true);
+    leftGear.motorInversion(1,true);
+    leftGear.motorInversion(2,true);
+    leftGear.motorInversion(3,true);
 }
 
 void FluxChassis::robotUpdate() {
@@ -42,10 +37,11 @@ void FluxChassis::robotUpdate() {
     headingController.setD(kD);
     visionEngaged = visionTable -> GetBoolean("engaged", false);
     frc::SmartDashboard::PutNumber("Current error", headingController.getCurrentError());
+
 }   
 
 void FluxChassis::teleopInit() {
-    navx.ZeroYaw();
+    headingTarget = navx.GetYaw();
 }
 
 void FluxChassis::teleopUpdate() {
@@ -53,20 +49,19 @@ void FluxChassis::teleopUpdate() {
     double rightHand = xbox.GetX(XboxController::kRightHand);
     double leftHand = xbox.GetY(XboxController::kLeftHand);
 
-    if(rightHand > 0.0 && rightHand < 0.09){
+     if(rightHand > 0.0 && rightHand < 0.09) {
         rightHand = 0.0;
     }
-
-    if(rightHand < 0.0 && rightHand > -0.09){
+    if(rightHand < 0.0 && rightHand > -0.09) {
         rightHand = 0.0;
     }
     double timeStep = chrono::duration<double>(chrono::high_resolution_clock::now() - lastUpdate).count();
     
     double headingChange = rightHand * timeStep * maxAngularVelocity;
     
-    if (xbox.GetAButton() && visionEngaged) {
-         headingTarget += (targetYaw / 10)* maxAngularVelocityVision * timeStep;
-    } else {
+    if (xbox.GetRawButton(4) && visionEngaged) {
+         headingTarget += (targetYaw / 10) * maxAngularVelocityVision * timeStep;
+    } else {    
         headingTarget += headingChange;
     }
     if (headingTarget > 180.0) {
@@ -79,11 +74,21 @@ void FluxChassis::teleopUpdate() {
     headingController.setTarget(headingTarget);
     double headingOutput = headingController.getOutput();
     frc::SmartDashboard::PutNumber("Output", headingOutput);
-    rightMaster.Power(leftHand - headingOutput);
-    leftMaster.Power(leftHand + headingOutput);
-
-    lastUpdate = chrono::high_resolution_clock::now();
     
+    rightGear.power(leftHand + headingOutput);
+    leftGear.power(leftHand - headingOutput);
+
+    //rightGear.power(xbox.GetY(XboxController::kRightHand));
+    //leftGear.power(leftHand);
+    if (xbox.GetBumperPressed(XboxController::kLeftHand)){
+        gearPiston.pushOrPull();
+    }   
+    
+    
+    lastUpdate = chrono::high_resolution_clock::now();
+    if (xbox.GetStartButtonPressed()) {
+        compressor.Stop();
+    }
 }
 
 void FluxChassis::autonInit() {

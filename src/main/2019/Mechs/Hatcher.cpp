@@ -40,6 +40,7 @@ void Hatcher::updateTeleopMovement(){
         tongue.pushOrPull();
     }
     if (xbox.GetAButtonPressed()) {
-      hatcher.pushOrPull();
+        hatcherState = !hatcherState;
+        hatcher.Set(hatcherState);
     }
 }

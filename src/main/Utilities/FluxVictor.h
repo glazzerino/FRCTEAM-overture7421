@@ -5,7 +5,7 @@
  */
 class FluxVictor : public VictorSPX {
     public:
-        explicit FluxVictor(unsigned int port);
+        FluxVictor(unsigned int port);
         void Power(double input);
         void Brake();
     private:

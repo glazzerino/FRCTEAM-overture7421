@@ -7,7 +7,11 @@
 #include "frc/smartdashboard/SmartDashboard.h"
 #include <chrono>
 #include "networktables/NetworkTableInstance.h"
+#include "Utilities/Gearbox.h"
+#include "frc/Compressor.h"
 using namespace std;
+
+
 class FluxChassis : public FluxSubsystem {
     public:
         FluxChassis();
@@ -25,10 +29,9 @@ class FluxChassis : public FluxSubsystem {
         void disabledUpdate() override;
     private:
         frc::XboxController xbox{0};
-        FluxVictor leftMaster{4};
-        FluxVictor leftSlave{5};
-        FluxVictor rightMaster{7};
-        FluxVictor rightSlave{8};
+        Gearbox leftGear{9,6,2};
+        Gearbox rightGear{3,1,7};
+        Piston gearPiston{6,7};
         AHRS navx{SPI::Port::kMXP};
         PID headingController;
         double headingTarget = 0.0;
@@ -39,4 +42,6 @@ class FluxChassis : public FluxSubsystem {
         std::shared_ptr<NetworkTable> visionTable;
         bool visionEngaged = false;
         double maxAngularVelocityVision = 0.0;
+        frc::Compressor compressor;
+       
 };

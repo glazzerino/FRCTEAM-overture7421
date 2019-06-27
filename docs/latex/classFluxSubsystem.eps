@@ -176,10 +176,10 @@ boxfont setfont
 (FluxSubsystem) cw
 (CargoPod) cw
 (Drivetrain) cw
+(FluxChassis) cw
 (FluxRobot) cw
 (Hatcher) cw
 (Odometry) cw
-(PepoChassis) cw
 (Delorean) cw
 (Pepito) cw
 /boxwidth boxwidth marginwidth 2 mul add def
@@ -196,12 +196,12 @@ boundx scalefactor div boundy scalefactor div scale
  (FluxSubsystem) 2.500000 2.000000 box
  (CargoPod) 0.000000 1.000000 box
  (Drivetrain) 1.000000 1.000000 box
- (FluxRobot) 2.000000 1.000000 box
- (Hatcher) 3.000000 1.000000 box
- (Odometry) 4.000000 1.000000 box
- (PepoChassis) 5.000000 1.000000 box
- (Delorean) 1.500000 0.000000 box
- (Pepito) 2.500000 0.000000 box
+ (FluxChassis) 2.000000 1.000000 box
+ (FluxRobot) 3.000000 1.000000 box
+ (Hatcher) 4.000000 1.000000 box
+ (Odometry) 5.000000 1.000000 box
+ (Delorean) 2.500000 0.000000 box
+ (Pepito) 3.500000 0.000000 box
 
 % ----- relations -----
 
@@ -213,19 +213,19 @@ solid
 0 0.000000 1.750000 in
 solid
 0 1.000000 1.750000 in
-dashed
+solid
 0 2.000000 1.750000 in
-solid
-1 2.000000 0.250000 out
-solid
-1.500000 2.500000 1.000000 conn
-solid
+dashed
 0 3.000000 1.750000 in
+solid
+1 3.000000 0.250000 out
+solid
+2.500000 3.500000 1.000000 conn
 solid
 0 4.000000 1.750000 in
 solid
 0 5.000000 1.750000 in
 solid
-0 1.500000 0.750000 in
-solid
 0 2.500000 0.750000 in
+solid
+0 3.500000 0.750000 in

@@ -30,13 +30,13 @@ Singleton that allows to share info between subsystems, currently relies solely 
 \subsubsection{\texorpdfstring{add\+Data()}{addData()}}
 {\footnotesize\ttfamily void Datapool\+::add\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+Name,  }\item[{const std\+::string \&}]{member\+Name,  }\item[{double}]{value }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classDatapool_a005421262c8c1a71fa93d167492ebb50}\label{classDatapool_a005421262c8c1a71fa93d167492ebb50}} 
+Requires a groupname to avoid overwritting another map \mbox{\Hypertarget{classDatapool_a005421262c8c1a71fa93d167492ebb50}\label{classDatapool_a005421262c8c1a71fa93d167492ebb50}} 
 \index{Datapool@{Datapool}!get\+Data@{get\+Data}}
 \index{get\+Data@{get\+Data}!Datapool@{Datapool}}
 \subsubsection{\texorpdfstring{get\+Data()}{getData()}}
-{\footnotesize\ttfamily double Datapool\+::get\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+Name,  }\item[{const std\+::string \&}]{sys\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double Datapool\+::get\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+Name,  }\item[{const std\+::string \&}]{member\+Name }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classDatapool_a9cfbb881291c80d851d0df66341b6299}\label{classDatapool_a9cfbb881291c80d851d0df66341b6299}} 
+Accessing data requires a groupname entry, returns saved double value \mbox{\Hypertarget{classDatapool_a9cfbb881291c80d851d0df66341b6299}\label{classDatapool_a9cfbb881291c80d851d0df66341b6299}} 
 \index{Datapool@{Datapool}!get\+Instance@{get\+Instance}}
 \index{get\+Instance@{get\+Instance}!Datapool@{Datapool}}
 \subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['robot',['Robot',['../classRobot.html',1,'']]]
+  ['pepito',['Pepito',['../classPepito.html',1,'']]],
+  ['pid',['PID',['../classPID.html',1,'']]],
+  ['piston',['Piston',['../classPiston.html',1,'']]]
 ];

@@ -9,10 +9,9 @@ CargoPod::CargoPod() :
 }
 
 void CargoPod::robotInit() {
-   
+    
     std::cout << "CARGO POD ONLINE" << "\n";
     cargoPistons.Set(false);
-    
 }
 
 void CargoPod::robotUpdate() {
@@ -20,7 +19,7 @@ void CargoPod::robotUpdate() {
 }
 
 void CargoPod::teleopInit() {
-;
+    std::cout << "CARGO POD ONLINE "<< "\n";
 }
 
 void CargoPod::teleopUpdate() {
@@ -42,8 +41,7 @@ void CargoPod::disabledInit() {
 
 void CargoPod::disabledUpdate() {
    if (!done) {
-        cargoPistons.Set(false);
-        
+        cargoPistons.Set(false); 
    }
   
 }
@@ -55,7 +53,5 @@ void CargoPod::updateTeleopMovement(){
     if (xbox.GetYButtonPressed()) {
         cargoPistons.Set(!cargoPistons.Get());
     }
-    if (xbox.GetXButtonPressed()) {
-       habPiston.pushOrPull();
-    }
+    
 }

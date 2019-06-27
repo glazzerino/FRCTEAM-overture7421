@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['odometry',['Odometry',['../classOdometry.html',1,'']]]
+  ['hatcher',['Hatcher',['../classHatcher.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rightjoystick',['rightJoystick',['../structAnalogStates.html#afa6408973c530772131737107f0c36f5',1,'AnalogStates']]],
-  ['righttriggerpressed',['rightTriggerPressed',['../structAnalogStates.html#aabedabe1fbaca0dc05b233afe51f1ac7',1,'AnalogStates']]]
+  ['pistonport1',['pistonPort1',['../structGearboxSettings.html#aef05348dd1e0aa46face95b11f66faa3',1,'GearboxSettings']]],
+  ['pistonport2',['pistonPort2',['../structGearboxSettings.html#ab3d3ea38cd44aea229c7aaccf537ab0b',1,'GearboxSettings']]]
 ];

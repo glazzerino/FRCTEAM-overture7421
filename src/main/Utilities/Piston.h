@@ -4,8 +4,8 @@
 using namespace frc;
 class Piston : DoubleSolenoid {
     public:
-        Piston(unsigned int port1, unsigned int port2) : DoubleSolenoid(port1, port2) {
-            
+        Piston(int port1, int port2) : DoubleSolenoid(port1, port2) {
+            pushOrPull();
         }
         void pushOrPull() {
             switch(state) {
@@ -28,6 +28,9 @@ class Piston : DoubleSolenoid {
         }
         void Off() {
             DoubleSolenoid::Set(DoubleSolenoid::kOff);
+        }
+        bool getState() {
+            return state;
         }
     private:
         bool state;
