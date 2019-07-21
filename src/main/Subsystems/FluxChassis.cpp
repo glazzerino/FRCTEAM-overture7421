@@ -3,8 +3,8 @@
 FluxChassis::FluxChassis() : FluxSubsystem("FluxChassis") {
     rightGear.ConfigOpenLoopRamp(ramp);
     leftGear.ConfigOpenLoopRamp(ramp);
-    rightGear.ConfigVoltageCompSaturation(12.0);
-    leftGear.ConfigVoltageCompSaturation(12.0);
+    //rightGear.ConfigVoltageCompSaturation(12.0);
+    //leftGear.ConfigVoltageCompSaturation(12.0);
     auto nt = nt::NetworkTableInstance::GetDefault();
     visionTable = nt.GetTable("ChickenVision");
    
